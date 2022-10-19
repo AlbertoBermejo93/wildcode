@@ -1,0 +1,23 @@
+@import "~bootstrap/scss/bootstrap";
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header{
+    background-color: rgb(244, 244, 244);
+    padding: 2em;
+}
+
+
+
+
+footer{
+    background-color: rgb(247, 108, 108);
+    padding: 2em;
+}
+
+footer p{
+    color: #fff;
+}

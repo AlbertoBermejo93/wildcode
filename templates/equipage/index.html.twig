@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Equipage{% endblock %}
+
+{% block body %}
+    <div class="row py-2">
+        <div class="col-12 text-center">
+            <h2>Ajouter un(e) Argonaute</h2>
+        </div>
+    </div>
+
+    <div class="p-2">
+        <form id="form" method="POST">
+            <div class="row">
+                <div class="col-12 text-center">
+                        <label for="nom"  class="control-label">Nom de l'argonaute</label>
+                </div>
+            </div>
+    
+            <div class="row py-2 d-flex align-items-center justify-content-center">
+                <div class="col-6">
+                    <input type="text" class="form-control" name="nom" id="nom"placeholder="Charalampos" required >
+                </div>
+                <div class="col-3 text-center">
+                    <button type="submit" class="btn btn-success" id="addArgonaute" >Envoyer</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  
+    <div class="row py-2">
+        <div class="col-12 text-center">
+            <h2>Membres de l'équipage</h2>
+        </div>
+    </div>
+
+    <div class="row py-2">
+        {% for equipage in equipages %}
+        <div class="col-4 d-flex align-items-center justify-content-center">
+                 <ul class="list-group list-group-horizontal-md ">
+                    <li class="list-group-item  m-2">
+                        <p>{{equipage.nom}}</p>
+                    </li>
+                </ul>
+        </div>
+          {% endfor %}
+    </div>
+{% endblock %}
